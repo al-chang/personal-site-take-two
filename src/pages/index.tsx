@@ -12,7 +12,7 @@ import "../index.css";
 const StyledContactBar = styled(ContactBar)`
   position: fixed;
   bottom: 0;
-  left: 15px;
+  right: 15px;
 
   @media screen and (max-width: 900px) {
     display: none;

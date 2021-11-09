@@ -5,26 +5,23 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   margin: auto;
-  max-width: 900px;
+  max-width: 850px;
+  margin-top: 20vh;
 `;
 
 const HeroContent = styled.div`
-  /* position: relative;
-  top: 20%; */
-  padding-top: 20%;
-  align-items: center;
   display: flex;
   flex-direction: column;
-  text-align: center;
 `;
 
 const NameContainer = styled.h1`
   font-size: 5em;
-  margin: 20px 0;
+  margin: 20px 0 5px;
   font-weight: 700;
   line-height: 90%;
+  color: #f72585;
 
   @media screen and (max-width: 600px) {
     font-size: 4em;
@@ -35,14 +32,16 @@ const AboutContainer = styled.p`
   max-width: 100%;
   margin: 20px 0;
   @media (min-width: 768px) {
-    max-width: 60%;
+    max-width: 80%;
   }
 `;
 
 const StyledSubHeader = styled.h3`
-  font-weight: 500;
+  font-weight: 700;
   font-size: 3em;
-  margin: 20px 0;
+  margin: 5px 0;
+
+  color: #b5179e;
 `;
 
 const Hero: React.FC = () => {

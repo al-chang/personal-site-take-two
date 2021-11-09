@@ -1,7 +1,9 @@
 import { graphql } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import styled from "styled-components";
 import { calculateTimeDifference, ExperinceBoxProps } from "../util/Util";
+import { StyledLink } from "./Components";
 
 const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
   const monthsWorked = calculateTimeDifference(props.startDate, props.endDate);
@@ -31,34 +33,56 @@ const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
 
   let timeFrame = timeFrameString();
 
+  const ExperienceBoxContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    /* background-color: #3f37c9; */
+    border: 2px solid #f72585;
+    border-radius: 20px;
+    padding: 2%;
+  `;
+
+  const ImageContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 20%;
+    padding: 2%;
+    /* background-color: white; */
+    border-radius: 20px 0 0 20px;
+    /* border: 2px solid white; */
+  `;
+
+  const InformationContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    justify-content: space-around;
+  `;
+
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "row", margin: "20px 0" }}>
-        <div
-          style={{
-            flexBasis: "10%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+      <ExperienceBoxContainer>
+        <ImageContainer>
           <GatsbyImage
             image={props.imageData?.node?.gatsbyImageData}
             alt="company logo"
           />
-        </div>
-        <div
-          style={{ display: "flex", flexDirection: "column", marginLeft: "5%" }}
-        >
-          <h3 style={{ fontWeight: "normal", margin: "0" }}>
+        </ImageContainer>
+        <InformationContainer>
+          <h3 style={{ fontWeight: "normal", margin: "0", color: "white" }}>
             {props.title}{" "}
-            <a
+            <StyledLink
               target="_blank"
               href={props.companyLink}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", display: "inline-block" }}
+              underLine
+              underLineColor="#f72585"
+              color="#f72585"
             >
               @ {props.company}
-            </a>
+            </StyledLink>
           </h3>
           <p style={{ margin: "0" }}>
             {props.notStarted
@@ -68,8 +92,8 @@ const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
                 } • ${timeFrame}`}
           </p>
           <p style={{ margin: "0" }}>{props.description}</p>
-        </div>
-      </div>
+        </InformationContainer>
+      </ExperienceBoxContainer>
     </>
   );
 };

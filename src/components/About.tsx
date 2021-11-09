@@ -1,6 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
+import { StyledLink } from "./Components";
 
 const AboutContainer = styled.div`
   margin: auto;
@@ -41,23 +42,38 @@ const About: React.FC = () => {
           <StyledAboutText>
             Hey! Welcome to my website. I am currently a third-year computer
             science major at
-            <a href="https://www.northeastern.edu/" target="_blank">
+            <StyledLink
+              href="https://www.northeastern.edu/"
+              target="_blank"
+              color="red"
+              underLine
+            >
               <strong id="northeastern"> Northeastern University</strong>
-            </a>
+            </StyledLink>
             . I have strong interests in web development, software engineering,
             and data science.
           </StyledAboutText>
           <StyledAboutText>
             In July I started working at
-            <a href="https://www.blueport.com/" target="_blank">
+            <StyledLink
+              href="https://www.blueport.com/"
+              target="_blank"
+              color="skyblue"
+              underLine
+            >
               <strong id="blueport"> Blueport Commerce </strong>
-            </a>
+            </StyledLink>
             as a front-end development co-op. At Blueport, I mainly utilize a
             tech stack of Angular and SCSS to implement mobile-first web
             components. This September I also started working with
-            <a href="https://www.c4cneu.com/" target="_blank">
+            <StyledLink
+              href="https://www.c4cneu.com/"
+              target="_blank"
+              color="purple"
+              underLine
+            >
               <strong id="c4c"> Code4Community</strong>
-            </a>
+            </StyledLink>
             , an organization that aids non-profits in the Boston area.
           </StyledAboutText>
           <StyledAboutText>

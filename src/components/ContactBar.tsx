@@ -9,11 +9,11 @@ const ContactBarContainer = styled.div`
   box-sizing: border-box;
 
   a {
-    color: black;
+    color: #888cb0;
     transition: transform 0.5s, color 0.5s;
 
     &:hover {
-      color: red;
+      color: #f72585;
       transform: translateY(-3px);
       transition: transform 0.5s, color 0.5s;
     }
@@ -30,7 +30,7 @@ const ContactBarContainer = styled.div`
     width: 1px;
     height: 90px;
     margin: 0px auto;
-    background-color: black;
+    background-color: #888cb0;
   }
 `;
 

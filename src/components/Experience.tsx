@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import { ResumeLink } from "../util/Util";
-// import { experience } from "../util/Util";
+import { StyledLink } from "./Components";
 import ExperienceBox from "./ExperienceBox";
 
 const ExperienceContainer = styled.div`
@@ -31,9 +31,9 @@ const Experience: React.FC = () => {
           .map(
             (exp, index) => !exp.hide && <ExperienceBox key={index} {...exp} />
           )}
-        <a target="_blank" href={ResumeLink}>
+        <StyledLink color="red" underLine target="_blank" href={ResumeLink}>
           View My Full Resume
-        </a>
+        </StyledLink>
       </ExperienceContainer>
     </>
   );
