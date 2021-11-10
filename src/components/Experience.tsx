@@ -11,6 +11,10 @@ const ExperienceContainer = styled.div`
   position: relative;
   flex-direction: column;
   display: flex;
+
+  @media screen and (max-width: 800px) {
+    margin: 0 10px;
+  }
 `;
 
 const LinkContainer = styled.div`

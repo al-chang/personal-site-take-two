@@ -10,6 +10,11 @@ const HeroContainer = styled.div`
   margin: auto;
   max-width: 850px;
   margin-top: 20vh;
+
+  @media screen and (max-width: 450px) {
+    margin: 15vh 10px;
+    width: auto;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -51,7 +56,7 @@ const Hero: React.FC = () => {
       <HeroContainer className="hero-container">
         <HeroContent>
           <p style={{ margin: 0 }}>Hi, my name is</p>
-          <NameContainer>Alexander Chang</NameContainer>
+          <NameContainer>Alexander Chang.</NameContainer>
           <StyledSubHeader>I like to build websites.</StyledSubHeader>
           <AboutContainer>
             I'm a software developer based in Boston, MA. My interests primarly

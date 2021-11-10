@@ -20,6 +20,15 @@ const ImageContainer = styled.div`
   justify-content: center;
 `;
 
+const TextContainer = styled.div`
+  max-width: 50%;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 10px;
+    max-width: max-content;
+  }
+`;
+
 const StyledAboutText = styled.p`
   a {
     text-decoration: none;
@@ -38,7 +47,7 @@ const About: React.FC = () => {
             />
           </div>
         </ImageContainer>
-        <div style={{ maxWidth: "50%" }}>
+        <TextContainer>
           <StyledAboutText>
             Hey! Welcome to my website. I am currently a third-year computer
             science major at
@@ -85,7 +94,7 @@ const About: React.FC = () => {
             Outside of school I am an active runner and soccer player. My
             favorite sports teams are Arsenal and the New York Red Bulls.
           </StyledAboutText>
-        </div>
+        </TextContainer>
       </AboutContainer>
     </>
   );

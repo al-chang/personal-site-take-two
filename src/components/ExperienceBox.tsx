@@ -77,6 +77,10 @@ const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
     /* background-color: white; */
     border-radius: 20px 0 0 20px;
     /* border: 2px solid white; */
+
+    @media screen and (max-width: 450px) {
+      flex-basis: 50%;
+    }
   `;
 
   const InformationContainer = styled.div`
