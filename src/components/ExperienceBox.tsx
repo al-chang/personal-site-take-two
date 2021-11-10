@@ -41,6 +41,31 @@ const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
     border-radius: 20px;
     padding: 2%;
     transition: background-color 0.5s;
+    position: relative;
+
+    &:not(:first-child) {
+      &:before {
+        content: "";
+        background-color: #f72585;
+        position: absolute;
+        width: 5px;
+        height: 25px;
+        top: -25px;
+        left: 50%;
+        display: block;
+      }
+    }
+
+    &:after {
+      content: "";
+      background-color: #f72585;
+      position: absolute;
+      width: 5px;
+      height: 22px;
+      bottom: -22px;
+      left: 50%;
+      display: block;
+    }
   `;
 
   const ImageContainer = styled.div`
