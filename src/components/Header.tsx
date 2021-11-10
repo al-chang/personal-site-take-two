@@ -37,15 +37,15 @@ const Header: React.FC = () => {
       <HeaderContainer>
         <span>Alexander Chang</span>
 
-        {/* Links for desktop and tablet  */}
-        <LinksContainer>
+        {/* Links for desktop and tablet, commented out until I get the chance to do them  */}
+        {/* <LinksContainer>
           <LinkContainer>
             <a href="place">Link 1</a>
           </LinkContainer>
           <LinkContainer>
             <a>Link 2</a>
           </LinkContainer>
-        </LinksContainer>
+        </LinksContainer> */}
 
         {/* TODO: Links for mobile */}
       </HeaderContainer>

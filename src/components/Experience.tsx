@@ -21,7 +21,6 @@ const LinkContainer = styled.div`
   margin: auto;
   align-self: center;
   justify-self: center;
-  background-color: #910f49;
 `;
 
 const Experience: React.FC = () => {

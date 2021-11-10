@@ -1,5 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { StyledLink } from "./Components";
 

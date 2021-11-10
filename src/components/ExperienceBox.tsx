@@ -41,11 +41,6 @@ const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
     border-radius: 20px;
     padding: 2%;
     transition: background-color 0.5s;
-
-    &:hover {
-      background-color: #0810a5;
-      transition: background-color 0.5s;
-    }
   `;
 
   const ImageContainer = styled.div`

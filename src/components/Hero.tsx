@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import ScrollReveal from "scrollreveal";
 import styled from "styled-components";
 
 const HeroContainer = styled.div`
@@ -47,7 +48,7 @@ const StyledSubHeader = styled.h3`
 const Hero: React.FC = () => {
   return (
     <>
-      <HeroContainer>
+      <HeroContainer className="hero-container">
         <HeroContent>
           <p style={{ margin: 0 }}>Hi, my name is</p>
           <NameContainer>Alexander Chang</NameContainer>
