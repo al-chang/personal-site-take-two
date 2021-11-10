@@ -1,12 +1,82 @@
 import { graphql } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { calculateTimeDifference, ExperinceBoxProps } from "../util/Util";
 import { StyledLink } from "./Components";
 
+const ExperienceBoxContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+  border: 2px solid #f72585;
+  border-radius: 20px;
+  padding: 2%;
+  position: relative;
+
+  .gatsby-image {
+    @media screen and (min-width: 900px) {
+      transition: width 0.5s;
+      width: 90%;
+    }
+  }
+
+  &:not(:first-child) {
+    &:before {
+      content: "";
+      background-color: #f72585;
+      position: absolute;
+      width: 5px;
+      height: 25px;
+      top: -25px;
+      left: 50%;
+      display: block;
+    }
+  }
+
+  &:after {
+    content: "";
+    background-color: #f72585;
+    position: absolute;
+    width: 5px;
+    height: 22px;
+    bottom: -22px;
+    left: 50%;
+    display: block;
+  }
+
+  &:hover {
+    .gatsby-image {
+      width: 100%;
+    }
+  }
+`;
+
+const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 20%;
+  padding: 2%;
+  /* background-color: white; */
+  border-radius: 20px 0 0 20px;
+  /* border: 2px solid white; */
+
+  @media screen and (max-width: 450px) {
+    flex-basis: 50%;
+  }
+`;
+
+const InformationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  justify-content: space-around;
+`;
+
 const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
   const monthsWorked = calculateTimeDifference(props.startDate, props.endDate);
+  useState();
 
   const months = monthsWorked % 12;
   const year = (monthsWorked - months) / 12;
@@ -33,63 +103,6 @@ const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
 
   let timeFrame = timeFrameString();
 
-  const ExperienceBoxContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    margin: 20px 0;
-    border: 2px solid #f72585;
-    border-radius: 20px;
-    padding: 2%;
-    transition: background-color 0.5s;
-    position: relative;
-
-    &:not(:first-child) {
-      &:before {
-        content: "";
-        background-color: #f72585;
-        position: absolute;
-        width: 5px;
-        height: 25px;
-        top: -25px;
-        left: 50%;
-        display: block;
-      }
-    }
-
-    &:after {
-      content: "";
-      background-color: #f72585;
-      position: absolute;
-      width: 5px;
-      height: 22px;
-      bottom: -22px;
-      left: 50%;
-      display: block;
-    }
-  `;
-
-  const ImageContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 20%;
-    padding: 2%;
-    /* background-color: white; */
-    border-radius: 20px 0 0 20px;
-    /* border: 2px solid white; */
-
-    @media screen and (max-width: 450px) {
-      flex-basis: 50%;
-    }
-  `;
-
-  const InformationContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-left: 2%;
-    justify-content: space-around;
-  `;
-
   return (
     <>
       <ExperienceBoxContainer>
@@ -97,6 +110,7 @@ const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
           <GatsbyImage
             image={props.imageData?.node?.gatsbyImageData}
             alt="company logo"
+            className="gatsby-image"
           />
         </ImageContainer>
         <InformationContainer>

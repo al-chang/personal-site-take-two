@@ -18,7 +18,7 @@ const ExperienceContainer = styled.div`
 `;
 
 const LinkContainer = styled.div`
-  padding: 1%;
+  padding: 4%;
   border: 2px solid #f72585;
   border-radius: 20px;
   display: inline-block;

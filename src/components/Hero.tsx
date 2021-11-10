@@ -38,7 +38,7 @@ const AboutContainer = styled.p`
   max-width: 100%;
   margin: 20px 0;
   @media (min-width: 768px) {
-    max-width: 80%;
+    max-width: 60%;
   }
 `;
 
