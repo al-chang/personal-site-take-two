@@ -4,6 +4,7 @@ import styled from "styled-components";
 import About from "../components/About";
 import ContactBar from "../components/ContactBar";
 import Experience from "../components/Experience";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import WorkExperience from "../components/TimeLine";
@@ -34,13 +35,17 @@ const IndexPage: React.FC = () => {
           crossOrigin="anonymous"
         ></script>
       </Helmet>
-      <Header />
-      <Hero />
-      <About />
-      <Experience />
+      <div style={{ position: "relative" }}>
+        <Header />
+        <Hero />
+        <About />
+        <Experience />
 
-      {/* @ts-expect-error */}
-      <StyledContactBar />
+        {/* @ts-expect-error */}
+        <StyledContactBar />
+      </div>
+
+      <Footer />
     </>
   );
 };

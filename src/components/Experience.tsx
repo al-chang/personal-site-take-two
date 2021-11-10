@@ -9,6 +9,19 @@ const ExperienceContainer = styled.div`
   margin: auto;
   max-width: 800px;
   position: relative;
+  flex-direction: column;
+  display: flex;
+`;
+
+const LinkContainer = styled.div`
+  padding: 1%;
+  border: 2px solid #f72585;
+  border-radius: 20px;
+  display: inline-block;
+  margin: auto;
+  align-self: center;
+  justify-self: center;
+  background-color: #910f49;
 `;
 
 const Experience: React.FC = () => {
@@ -31,9 +44,11 @@ const Experience: React.FC = () => {
           .map(
             (exp, index) => !exp.hide && <ExperienceBox key={index} {...exp} />
           )}
-        <StyledLink color="red" underLine target="_blank" href={ResumeLink}>
-          View My Full Resume
-        </StyledLink>
+        <LinkContainer>
+          <StyledLink color="red" underLine target="_blank" href={ResumeLink}>
+            View My Full Resume
+          </StyledLink>
+        </LinkContainer>
       </ExperienceContainer>
     </>
   );

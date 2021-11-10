@@ -37,10 +37,15 @@ const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
     display: flex;
     flex-direction: row;
     margin: 20px 0;
-    /* background-color: #3f37c9; */
     border: 2px solid #f72585;
     border-radius: 20px;
     padding: 2%;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: #0810a5;
+      transition: background-color 0.5s;
+    }
   `;
 
   const ImageContainer = styled.div`
@@ -71,12 +76,22 @@ const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
           />
         </ImageContainer>
         <InformationContainer>
-          <h3 style={{ fontWeight: "normal", margin: "0", color: "white" }}>
+          <h3
+            style={{
+              fontWeight: "500",
+              margin: "0",
+              color: "#ad59f7",
+            }}
+          >
             {props.title}{" "}
             <StyledLink
               target="_blank"
               href={props.companyLink}
-              style={{ textDecoration: "none", display: "inline-block" }}
+              style={{
+                textDecoration: "none",
+                display: "inline-block",
+                fontWeight: "normal",
+              }}
               underLine
               underLineColor="#f72585"
               color="#f72585"

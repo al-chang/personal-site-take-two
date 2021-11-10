@@ -41,7 +41,7 @@ const StyledSubHeader = styled.h3`
   font-size: 3em;
   margin: 5px 0;
 
-  color: #b5179e;
+  color: #8d3fd0;
 `;
 
 const Hero: React.FC = () => {
