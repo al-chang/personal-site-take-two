@@ -22,7 +22,7 @@ module.exports = {
         startDate: "July 2021",
         endDate: "Dec 2021",
         description:
-          "At Blueport, I worked as a front-end development co-op, building out mobile first components in Angular and SCSS for our e-commerce platform.",
+          "At Blueport, I worked as a front-end developer, building out mobile first components in Angular and SCSS for our e-commerce platform.",
         imageURL: "blueport",
       },
       {
