@@ -16,8 +16,9 @@ const ExperienceBoxContainer = styled.div`
 
   .gatsby-image {
     @media screen and (min-width: 900px) {
-      transition: width 0.5s;
+      transition: width 0.5s, filter 0.5s;
       width: 90%;
+      filter: grayscale(100%);
     }
   }
 
@@ -47,6 +48,7 @@ const ExperienceBoxContainer = styled.div`
 
   &:hover {
     .gatsby-image {
+      filter: none;
       width: 100%;
     }
   }

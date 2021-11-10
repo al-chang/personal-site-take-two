@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
   return (
     <>
       <FooterContainer>
-        <p>Designed and Developed by me! Built using Gatsby.</p>
+        <p>Designed and developed by me! Built using Gatsby.</p>
         <div>
           <a href={ResumeLink} target="_blank">
             <i className="fas fa-user"></i>
