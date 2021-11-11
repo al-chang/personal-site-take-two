@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
-import ScrollReveal from "scrollreveal";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   margin: auto;
   max-width: 850px;
   margin-top: 20vh;
@@ -55,14 +55,16 @@ const Hero: React.FC = () => {
     <>
       <HeroContainer className="hero-container">
         <HeroContent>
-          <p style={{ margin: 0 }}>Hi, my name is</p>
-          <NameContainer>Alexander Chang.</NameContainer>
-          <StyledSubHeader>I like to build websites.</StyledSubHeader>
-          <AboutContainer>
-            I'm a software developer based in Boston, MA. My interests primarly
-            are in front-end and full stack development, although I am always
-            open to learning new things!
-          </AboutContainer>
+          <Fade top cascade>
+            <p style={{ margin: 0 }}>Hi, my name is</p>
+            <NameContainer>Alexander Chang.</NameContainer>
+            <StyledSubHeader>I like to build websites.</StyledSubHeader>
+            <AboutContainer>
+              I'm a software developer based in Boston, MA. My interests
+              primarly are in front-end and full stack development, although I
+              am always open to learning new things!
+            </AboutContainer>
+          </Fade>
         </HeroContent>
       </HeroContainer>
     </>

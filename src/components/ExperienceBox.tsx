@@ -6,15 +6,16 @@ import { calculateTimeDifference, ExperinceBoxProps } from "../util/Util";
 import { StyledLink } from "./Components";
 
 const ExperienceBoxContainer = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
   margin: 20px 0;
   border: 2px solid #f72585;
   border-radius: 20px;
   padding: 2%;
   position: relative;
+  grid-template-columns: 20% 80%;
 
   .gatsby-image {
+    object-fit: cover;
     @media screen and (min-width: 900px) {
       transition: width 0.5s, filter 0.5s;
       width: 90%;
@@ -58,7 +59,6 @@ const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 20%;
   padding: 2%;
   /* background-color: white; */
   border-radius: 20px 0 0 20px;
@@ -78,10 +78,11 @@ const InformationContainer = styled.div`
 
 const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
   const monthsWorked = calculateTimeDifference(props.startDate, props.endDate);
-  useState();
 
   const months = monthsWorked % 12;
   const year = (monthsWorked - months) / 12;
+  const days = (monthsWorked * 30.4167).toFixed(0) + " days";
+  const minutes = monthsWorked * 43800 + " minutes";
 
   const timeFrameString = () => {
     let timeFrame = "";
@@ -103,7 +104,10 @@ const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
     return timeFrame;
   };
 
-  let timeFrame = timeFrameString();
+  const timeFrame = timeFrameString();
+
+  const timeArray = [timeFrame, days, minutes];
+  const [timeIndex, updateTimeIndex] = useState(0);
 
   return (
     <>
@@ -139,13 +143,24 @@ const ExperienceBox: React.FC<ExperinceBoxProps> = (props) => {
               @ {props.company}
             </StyledLink>
           </h3>
-          <p style={{ margin: "0" }}>
-            {props.notStarted
-              ? `Expected Start: ${props.startDate}`
-              : `${props.startDate} - ${
-                  props.endDate || "Present"
-                } • ${timeFrame}`}
-          </p>
+
+          {props.notStarted ? (
+            <p
+              style={{ margin: "0" }}
+            >{`Expected Start: ${props.startDate}`}</p>
+          ) : (
+            <p style={{ margin: "0" }}>
+              {`${props.startDate} - ${props.endDate || "Present"} • `}
+              <span
+                onClick={() =>
+                  updateTimeIndex((timeIndex + 1) % timeArray.length)
+                }
+                style={{ cursor: "pointer" }}
+              >
+                {timeArray[timeIndex]}
+              </span>
+            </p>
+          )}
           <p style={{ margin: "0" }}>{props.description}</p>
         </InformationContainer>
       </ExperienceBoxContainer>

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { ResumeLink } from "../util/Util";
 import { StyledLink } from "./Components";
 import ExperienceBox from "./ExperienceBox";
+import Fade from "react-reveal/Fade";
 
 const ExperienceContainer = styled.div`
   margin: auto;

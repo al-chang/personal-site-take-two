@@ -1,4 +1,5 @@
 import React from "react";
+import { Scroll } from "react-fns";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import About from "../components/About";
@@ -21,6 +22,8 @@ const StyledContactBar = styled(ContactBar)`
 `;
 
 const IndexPage: React.FC = () => {
+  let firstLoad = false;
+
   return (
     <>
       <Helmet>
@@ -38,8 +41,20 @@ const IndexPage: React.FC = () => {
       <div style={{ position: "relative" }}>
         <Header />
         <Hero />
-        <About />
-        <Experience />
+        <Scroll
+          render={({ x, y }) => {
+            if (y > 10) firstLoad = true;
+
+            return (
+              (y > 10 || firstLoad) && (
+                <>
+                  <About />
+                  <Experience />
+                </>
+              )
+            );
+          }}
+        />
 
         {/* @ts-expect-error */}
         <StyledContactBar />

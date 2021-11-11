@@ -45,6 +45,15 @@ module.exports = {
         notStarted: true,
       },
     ],
+    projects: [
+      {
+        title: "BrawlAlytics",
+        startDate: "January 2021",
+        endDate: "April 2021",
+        description: "description",
+        image: "image-name",
+      },
+    ],
   },
   plugins: [
     "gatsby-plugin-styled-components",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { ResumeLink } from "../util/Util";
 
@@ -29,11 +29,41 @@ const FooterContainer = styled.div`
   }
 `;
 
+const StyledSpan = styled.span`
+  background: linear-gradient(
+    90deg,
+    #d25359,
+    #d0922b 20.31%,
+    #f9d651 39.06%,
+    #6bdc85 57.81%,
+    #498ff7 78.65%,
+    #716fd5
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  &:hover {
+    color: transparent;
+    transition: color 0.5s;
+  }
+`;
+
 const Footer: React.FC = () => {
+  const [name, updateName] = useState(false);
+
   return (
     <>
       <FooterContainer>
-        <p>Designed and developed by me! Built using Gatsby.</p>
+        <p>
+          Designed and developed by{" "}
+          <StyledSpan
+            onClick={() => updateName(!name)}
+            style={{ cursor: "pointer" }}
+          >
+            {name ? "Al Chang" : "me"}
+          </StyledSpan>
+          ! Built using Gatsby.
+        </p>
         <div>
           <a href={ResumeLink} target="_blank">
             <i className="fas fa-user"></i>
