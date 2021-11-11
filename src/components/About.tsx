@@ -1,7 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { StyledLink } from "./Components";
+import { Header, StyledLink } from "./Components";
 import Fade from "react-reveal/Fade";
 
 const AboutContainer = styled.div`
@@ -40,6 +40,7 @@ const About: React.FC = () => {
   return (
     <>
       <Fade top>
+        <Header>About Me</Header>
         <AboutContainer>
           <ImageContainer>
             <div style={{ width: "70%" }}>

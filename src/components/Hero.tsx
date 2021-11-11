@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
             <StyledSubHeader>I like to build websites.</StyledSubHeader>
             <AboutContainer>
               I'm a software developer based in Boston, MA. My interests
-              primarly are in front-end and full stack development, although I
+              primarily are in front-end and full stack development, although I
               am always open to learning new things!
             </AboutContainer>
           </Fade>

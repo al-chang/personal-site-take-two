@@ -37,6 +37,7 @@ const IndexPage: React.FC = () => {
           src="https://kit.fontawesome.com/cda309cb6a.js"
           crossOrigin="anonymous"
         ></script>
+        <title>Alexander Chang</title>
       </Helmet>
       <div style={{ position: "relative" }}>
         <Header />

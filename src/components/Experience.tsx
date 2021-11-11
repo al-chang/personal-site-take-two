@@ -2,12 +2,12 @@ import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import { ResumeLink } from "../util/Util";
-import { StyledLink } from "./Components";
+import { Header, StyledLink } from "./Components";
 import ExperienceBox from "./ExperienceBox";
 import Fade from "react-reveal/Fade";
 
 const ExperienceContainer = styled.div`
-  margin: auto;
+  margin: 10% auto;
   max-width: 800px;
   position: relative;
   flex-direction: column;
@@ -43,11 +43,15 @@ const Experience: React.FC = () => {
   return (
     <>
       <ExperienceContainer>
-        {experience
-          .reverse()
-          .map(
-            (exp, index) => !exp.hide && <ExperienceBox key={index} {...exp} />
-          )}
+        <Header>Experience</Header>
+        <div>
+          {experience
+            .reverse()
+            .map(
+              (exp, index) =>
+                !exp.hide && <ExperienceBox key={index} {...exp} />
+            )}
+        </div>
         <LinkContainer>
           <StyledLink color="red" underLine target="_blank" href={ResumeLink}>
             View My Full Resume
