@@ -29,8 +29,8 @@ const ExperienceBoxContainer = styled.div`
       background-color: #f72585;
       position: absolute;
       width: 5px;
-      height: 25px;
-      top: -25px;
+      height: 24px;
+      top: -24px;
       left: 50%;
       display: block;
     }
