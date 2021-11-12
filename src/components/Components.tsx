@@ -7,6 +7,8 @@ export interface StyledLinkProps {
   underLine?: boolean;
 }
 
+// Credit to https://css-irl.info/animating-underlines/ for animated underline css
+
 export const Header = styled.h2`
   background: linear-gradient(
       to right,

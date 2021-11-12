@@ -39,7 +39,7 @@ const StyledAboutText = styled.p`
 const About: React.FC = () => {
   return (
     <>
-      <Fade top>
+      <Fade>
         <Header>About Me</Header>
         <AboutContainer>
           <ImageContainer>
