@@ -8,7 +8,7 @@ const HeroContainer = styled.div`
   width: 100%;
   height: 60vh;
   margin: auto;
-  max-width: 850px;
+  max-width: 900px;
   margin-top: 20vh;
 
   @media screen and (max-width: 450px) {
@@ -23,7 +23,7 @@ const HeroContent = styled.div`
 `;
 
 const NameContainer = styled.h1`
-  font-size: 5em;
+  font-size: 6em;
   margin: 20px 0 5px;
   font-weight: 700;
   line-height: 90%;
@@ -44,7 +44,7 @@ const AboutContainer = styled.p`
 
 const StyledSubHeader = styled.h3`
   font-weight: 700;
-  font-size: 3em;
+  font-size: 4em;
   margin: 5px 0;
 
   color: #8d3fd0;
