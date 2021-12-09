@@ -1,7 +1,7 @@
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
 export const ResumeLink =
-  "https://drive.google.com/file/d/1WcmozuSSZ-7cddr4mUtZTLBDn2QdVBkF/view?usp=sharing";
+  "https://drive.google.com/file/d/1IUdte0j6CW0ui8Nt0BsFDO6533YANBml/view?usp=sharing";
 
 export interface ExperinceBoxProps {
   title: string;
