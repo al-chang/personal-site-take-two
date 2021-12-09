@@ -54,38 +54,38 @@ const About: React.FC = () => {
           <TextContainer>
             <StyledAboutText>
               Hey! Welcome to my website. I am currently a third-year computer
-              science major at
+              science major at{" "}
               <StyledLink
                 href="https://www.northeastern.edu/"
                 target="_blank"
                 color="red"
                 underLine
               >
-                <strong id="northeastern"> Northeastern University</strong>
+                <strong id="northeastern">Northeastern University</strong>
               </StyledLink>
               . I have strong interests in web development, software
               engineering, and data science.
             </StyledAboutText>
             <StyledAboutText>
-              In July I started working at
+              In July I started working at{" "}
               <StyledLink
                 href="https://www.blueport.com/"
                 target="_blank"
                 color="skyblue"
                 underLine
               >
-                <strong id="blueport"> Blueport Commerce </strong>
-              </StyledLink>
+                <strong id="blueport">Blueport Commerce</strong>
+              </StyledLink>{" "}
               as a front-end development co-op. At Blueport, I mainly utilize a
               tech stack of Angular and SCSS to implement mobile-first web
-              components. This September I also started working with
+              components. This September I also started working with{" "}
               <StyledLink
                 href="https://www.c4cneu.com/"
                 target="_blank"
                 color="purple"
                 underLine
               >
-                <strong id="c4c"> Code4Community</strong>
+                <strong id="c4c">Code4Community</strong>
               </StyledLink>
               , an organization that aids non-profits in the Boston area.
             </StyledAboutText>
