@@ -10,11 +10,7 @@ export interface StyledLinkProps {
 // Credit to https://css-irl.info/animating-underlines/ for animated underline css
 
 export const Header = styled.h2`
-  background: linear-gradient(
-      to right,
-      rgba(100, 200, 200, 1),
-      rgba(100, 200, 200, 1)
-    ),
+  background: linear-gradient(to right, white, white),
     linear-gradient(
       to right,
       rgba(255, 0, 0, 1),

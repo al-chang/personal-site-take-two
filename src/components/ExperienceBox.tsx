@@ -18,7 +18,6 @@ const ExperienceBoxContainer = styled.div`
     object-fit: cover;
     @media screen and (min-width: 900px) {
       transition: width 0.5s, filter 0.5s;
-      width: 90%;
       filter: grayscale(100%);
     }
   }
@@ -50,7 +49,6 @@ const ExperienceBoxContainer = styled.div`
   &:hover {
     .gatsby-image {
       filter: none;
-      width: 100%;
     }
   }
 `;
@@ -59,13 +57,12 @@ const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2%;
-  /* background-color: white; */
   border-radius: 20px 0 0 20px;
-  /* border: 2px solid white; */
+  width: 80%;
 
   @media screen and (max-width: 450px) {
     flex-basis: 50%;
+    width: 100%;
   }
 `;
 

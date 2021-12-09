@@ -40,7 +40,7 @@ const About: React.FC = () => {
   return (
     <>
       <Fade>
-        <Header>About Me</Header>
+        <Header style={{ maxWidth: "900px", margin: "auto" }}>About Me</Header>
         <AboutContainer>
           <ImageContainer>
             <div style={{ width: "70%" }}>
